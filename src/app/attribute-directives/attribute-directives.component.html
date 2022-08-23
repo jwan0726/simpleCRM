@@ -1,0 +1,54 @@
+<div id="Attribute Directives">
+  <h1 [ngClass]="'c2'">Attribute Directives</h1>
+  <ul>
+    <li>ngStyle</li>
+    <li>ngClass</li>
+  </ul>
+  <ul>
+    <li>
+      <h2 [ngClass]="'c1'">ngStyle</h2>
+    </li>
+    <div [ngStyle]="{ 'background-color': 'orange', color: '#ffffff' }">
+      This is the Orange DIV
+      <p>This [ngStyle] is being declared directly at the html doc.</p>
+    </div>
+    <div [ngStyle]="{ 'background-color': styleProp, color: '#ffffff' }">
+      This is the Dynamic DIV
+      <p>
+        Dynamic DIV needed to be declared in &lt;app.component.ts &gt; class
+      </p>
+    </div>
+    <div
+      [ngClass]="'c3'"
+      [ngStyle]="{
+        color: txtColor === 'blue' ? 'blue' : 'green'
+      }"
+    >
+      This is the Conditional DIV
+      <p>
+        Similarly, the Conditional DIV needed to be declared in
+        &lt;app.component.ts &gt; class. <br />The trigger condition can then be
+        set in the html doc.
+      </p>
+    </div>
+    <li>
+      <h2 [ngClass]="'c1'">ngClass</h2>
+    </li>
+    <div [ngClass]="'c3'">This is ngClass-Direct Declare</div>
+    <div [ngClass]="StyleClsProp">
+      This is Dynamic Codes. Declare this in&lt;app.component.ts &gt; class
+    </div>
+    <div [ngClass]="ConditionClsProp === 'c4' ? 'c4' : 'c5'">
+      <p>
+        This is Conditional Codes. Declare this in &lt;app.component.ts &gt;
+        class & &lt;app.component.css &gt;
+      </p>
+    </div>
+    <div [ngClass]="{ c4: true, c5: false }">
+      <p>
+        This is ngClass using Object. Declare this in &lt;app.component.ts &gt;
+        class & &lt;app.component.css &gt;
+      </p>
+    </div>
+  </ul>
+</div>

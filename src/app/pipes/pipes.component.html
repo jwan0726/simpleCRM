@@ -1,0 +1,65 @@
+<div id="Pipes">
+  <h1 [ngClass]="'c2'">Pipes</h1>
+  <ul>
+    <li><h2 [ngClass]="'c1'">Built-in Pipes</h2></li>
+    <p>
+      Some Built-in pipes include lowercase formatting, uppercase formatting and
+      the date formatting.
+    </p>
+    <table id="Build-in Pipes">
+      <tr>
+        <th>Before</th>
+        <th>Pipe_Name</th>
+        <th>After</th>
+      </tr>
+      <br />
+      <tr>
+        <td>{{ lowerCaseExample }}</td>
+        <td>lowercase</td>
+        <td>{{ lowerCaseExample | lowercase }}</td>
+      </tr>
+      <tr>
+        <td>{{ upperCaseExample }}</td>
+        <td>uppercase</td>
+        <td>{{ upperCaseExample | uppercase }}</td>
+      </tr>
+      <tr>
+        <td>{{ dateExample }}</td>
+        <td>date</td>
+        <td>{{ dateExample | date }}</td>
+      </tr>
+      <tr>
+        <td>{{ userObject }}</td>
+        <td>json</td>
+        <td>{{ userObject | json }}</td>
+      </tr>
+      <tr>
+        <td>{{ currencyExample }}</td>
+        <td>currency</td>
+        <td>{{ currencyExample | currency }}</td>
+      </tr>
+      <tr>
+        <td>{{ percentExample }}</td>
+        <td>percent</td>
+        <td>{{ percentExample | percent }}</td>
+      </tr>
+    </table>
+    <br />
+    <p>
+      Printing json objects is commonly used for debugging purposes:<br />
+      {{ userObject | json }}
+    </p>
+    <li><h2 [ngClass]="'c1'">Passing Parameteres in pipes</h2></li>
+    <p>{{ dateExample | date: "dd/MMM-yy" }}</p>
+    <p>
+      from {{ percentExample }} transform to
+      {{ percentExample | percent: "2.2" }}
+    </p>
+    <li><h2 [ngClass]="'c1'">Chaining in pipes</h2></li>
+    <p>You can use multiple pipes on the same input as well!!</p>
+    <p>
+      For example using uppercase AND the DATE formatting: <br />
+      {{ dateExample | date | uppercase }}
+    </p>
+  </ul>
+</div>

@@ -1,0 +1,88 @@
+<div id="Element Bindings and Interpolation">
+  <h1 [ngClass]="['c2', 'mar']">Element Bindings and Interpolation</h1>
+  <ul>
+    <li>
+      <h2 [ngClass]="'c1'">
+        <a href="../../../notes/# 24 Data Binding.txt">Data Binding</a>
+      </h2>
+    </li>
+    <li>
+      <h2 [ngClass]="'c1'"><a href="#interpol">Interpolation</a></h2>
+    </li>
+    <p>
+      Interpolation is frequently used in combination with ngFor & ngIf. See the
+      Table example above.
+    </p>
+    <li>
+      <h2 [ngClass]="'c1'">Property Binding</h2>
+    </li>
+    <p>Property binding lets u to bind to any HTML property</p>
+    <p>
+      [InnerHTML] is a property. The firstName value is being pushed to this
+      placeholder.<br />This technique can be used in jpg too. We can bind
+      multiple properties to a DOM Element
+    </p>
+    <div [innerHTML]="userObject.firstName"></div>
+    <ul>
+      <li>innterHTML</li>
+      <li>[src] + [alt]</li>
+      <li>title &lt;h1&gt;</li>
+      <li>table &lt;td&gt; &lt;tr&gt;</li>
+      <li>style to p tag</li>
+    </ul>
+    <img [src]="imgUrl" [alt]="altUrl" />
+    <li>
+      <h2 [ngClass]="'c1'">Attribute Binding</h2>
+    </li>
+    <p>Attribute binding is oneway<br />: From View -> Component</p>
+    <p>
+      This ugly table here demonstrates ColSpan and RowSpan Attribute binding
+    </p>
+    <table style="background-color: #ddd">
+      <tr>
+        <td [attr.rowspan]="colVal">11FirstCol</td>
+        <td>12SecondCol</td>
+        <td>13ThirdCol</td>
+      </tr>
+      <tr>
+        <td>21FirstCol</td>
+        <td>22SecondCol</td>
+        <td>23ThirdCol</td>
+      </tr>
+      <tr>
+        <td [attr.colspan]="colVal">31FirstCol</td>
+        <td>32SecondCol</td>
+        <td>33ThirdCol</td>
+      </tr>
+    </table>
+    <li>
+      <h2 [ngClass]="'c1'">Event Binding</h2>
+    </li>
+    <p>Event binding is oneway: From View -> Component</p>
+    <button mat-raised-button [ngClass]="'c4'" (click)="sayHello()">
+      Hello
+    </button>
+    <button mat-raised-button [ngClass]="'b1'" (click)="turn()">
+      Click ME!
+    </button>
+    <p (mouseover)="highlightBGcolor()">
+      Highlight me please [Mouseover triggered js]
+    </p>
+    <input type="text" (focus)="inputBox()" />
+    <li>
+      <h2 [ngClass]="'c1'">Two-Way Binding</h2>
+    </li>
+    <p>
+      Two-Way Binding combines Property binding and Event Binding. <br />Using
+      '[(ngModel)]' declare Name of the ngModel in &lt;app.component.ts &gt;
+      .<br />
+      Lets see how does it work.
+    </p>
+    <input [(ngModel)]="username" />
+    <p>{{ username }}</p>
+    <p>
+      Remember to import FormsModule from @angular/forms in app.module.ts &
+      declare the var in component.ts
+    </p>
+  </ul>
+</div>

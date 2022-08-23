@@ -1,4 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+/* Subheadings */
+.c1 {
+  background-color: rgb(28, 195, 207);
+  color: white;
+}
+/* Big headings */
+.c2 {
+  background-color: rgb(208, 31, 252);
+  /* font-size: 20px; */
+  color: white;
+}
+.c3 {
+  background-color: yellow;
+  color: black;
+}
+.c4 {
+  background-color: rgb(31, 173, 90);
+  color: antiquewhite;
+}
+.c5 {
+  background-color: black;
+  color: aliceblue;
+}
+.b1 {
+  background-color: red;
+  color: black;
+}
+
+.mar {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.head1 {
+  background-color: rgb(8, 31, 238);
+  color: antiquewhite;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+/* some condition */
 
 html,
 body {

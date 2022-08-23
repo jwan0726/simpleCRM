@@ -1,0 +1,58 @@
+<div id="Structural Directives">
+  <h1 [ngClass]="'c2'">Structural Directives</h1>
+  <ul>
+    <li>ngIf</li>
+    <li>ngFor</li>
+    <li>ngSwitch</li>
+  </ul>
+  <ul>
+    <li>
+      <h2 [ngClass]="'c1'">ngIf</h2>
+    </li>
+    <div *ngIf="success_msg; then updated_msg; else error_msg"></div>
+    <ng-template #updated_msg> User updated successfully </ng-template>
+    <ng-template #error_msg> User was not added </ng-template>
+    <li>
+      <h2 [ngClass]="'c1'">ngFor</h2>
+    </li>
+    <p>
+      ngFor are like for loops. They loop thru the dictionary and return the
+      value of those fields (columns)
+    </p>
+    <h3>Even and Odd</h3>
+    <p id="interpol">
+      Combining ngFor & ngIf with interpolation.<br />
+      The field of each object returns as a key:<br />value pair and each
+      odd/even iterations are colour-conditioned using *ngIf inside *ngFor.
+    </p>
+    <table [ngClass]="'mar'">
+      <tr>
+        <th>Index</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+      </tr>
+      <tr *ngFor="let contact of contacts; index as i; even as e; odd as o">
+        <td *ngIf="o" style="background-color: #ffffcf">{{ i }}</td>
+        <td *ngIf="e" style="background-color: #d0fafd">{{ i }}</td>
+        <td>{{ contact.firstName }}</td>
+        <td>{{ contact.lastName }}</td>
+      </tr>
+    </table>
+    <li>
+      <h2 [ngClass]="'c1'">ngSwitch</h2>
+    </li>
+    <p>ngSwitch is useful in doing categorical stuffs</p>
+    <div [ngSwitch]="superPower">
+      <div *ngSwitchCase="'wonderWoman'">Display WonderWoman superPower</div>
+      <div *ngSwitchCase="'Hulk'">Display Hulk superPower</div>
+      <div *ngSwitchCase="'Spiderman'">Display Spiderman superPower</div>
+      <div *ngSwitchCase="'Batman'">Display Batman superPower</div>
+    </div>
+    <div [ngSwitch]="price" [ngClass]="'mar'">
+      <div *ngSwitchCase="80">Display WonderWoman superPower</div>
+      <div *ngSwitchCase="60">Display Hulk superPower</div>
+      <div *ngSwitchCase="40">Display Spiderman superPower</div>
+      <div *ngSwitchDefault>This is the DefaultCase for ngSwitchDefault</div>
+    </div>
+  </ul>
+</div>
