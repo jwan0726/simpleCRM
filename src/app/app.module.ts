@@ -15,14 +15,25 @@ import { AttributeDirectivesComponent } from './attribute-directives/attribute-d
 import { BindingInterpolComponent } from './binding-interpol/binding-interpol.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { RoutingBasicComponent } from './routing-basic/routing-basic.component';
+import { UsersModule } from './users/users.module';
 @NgModule({
-  declarations: [AppComponent, HightlightDirective, HeaderComponent, StructuralDirectivesComponent, AttributeDirectivesComponent, BindingInterpolComponent, PipesComponent, RoutingBasicComponent],
+  declarations: [
+    AppComponent,
+    HightlightDirective,
+    HeaderComponent,
+    StructuralDirectivesComponent,
+    AttributeDirectivesComponent,
+    BindingInterpolComponent,
+    PipesComponent,
+    RoutingBasicComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
     FormsModule,
+    UsersModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
