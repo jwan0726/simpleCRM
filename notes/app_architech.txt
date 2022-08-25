@@ -1,0 +1,41 @@
+what is module>
+what is components
+
+Everything u see is a component
+module is place where u group your components together
+
+///
+CRM applications # modular based app
+
+src
+    contacts -> module
+        add-contacts -> component inside module
+        edit-contact ->
+        delete-contact->
+        view-contact->
+    
+    User -> module
+        add-user
+    orers
+    leads
+    reports
+    settings
+    profile
+
+
+    Shared repo
+        auth
+        tokens
+    
+    services  # HTTP related/reusable code
+        contact-service.ts
+        user-service.ts
+
+    assets
+        images
+        mock-data
+
+    pipes
+        highlight-pipe
+    
+///

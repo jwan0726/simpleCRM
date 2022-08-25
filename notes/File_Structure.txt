@@ -1,0 +1,135 @@
+Folder Structure
+
+- Project Folder
+
+- E2E
+    - Protractor Framework
+        - by deafault
+    - End to End test scripts
+    - End with .ts
+    Src
+        app.e2e-spec.ts
+        login.e2e-spec.ts
+    Protractor.conf.js
+        -> Config settings for running end to end test scripts
+    
+    tsconfig.json
+        -> Basic typscript settings
+
+3. src
+    - entire source code of ur application is here
+    - app module
+        app.module.ts
+        -app component
+            - app.component.html -> view/ui/html code
+            - app.component.scss -> stylesheet
+            - app.component.spec.ts -> unit test scripts
+            - app.component.ts -> class file
+    
+    - assets
+        - images
+        - mock data`
+        - apis
+    
+    - envr
+        - local
+        - dev
+        - qa
+        - uat
+        - prod
+    
+    - favicon.ico
+
+    - index.html
+        Single Page application
+            Theres only one index.html
+            <app-root> only. all app will be dynamically generated and inserted in this tag
+
+            index.html
+                <app-root>
+
+    - main.ts
+        - bootstrapModule
+            - AppModule
+                -
+        - Starting Point of your application
+            ->If i want to change the bootstrap module where shd i change?: main.ts
+            ->Can we bootstrap with multiple module? Yes its not mandatory that its shd be AppModule
+        
+        - polyfills.ts  
+            supporting old browsers
+
+            // leave blank when do simple projects
+        
+        - styles.scss
+            -global/common stylesheets for elemetns
+                a{
+
+                }
+
+        - test.ts
+            - testscript for main.ts
+            -> Whats the difference between main.ts and and test.ts?? : main.ts is the main file to start the application.
+            -> test.ts is for testing the main.ts file code
+        
+        - aungular.json
+            -> backbone of application
+                -> settings 
+                -> scripts
+                -> ports
+                -> schematics 
+        - karma.conf.js
+            -> spec.ts
+            -> test script runner
+            -> running or executing all test scripts
+
+        - tsconfig.json
+            target: es2015; module: es2020; outdir:
+
+        - tslint
+            waring
+            highlighting
+            - enforce coding standards.. set by your organisation
+            - first to check the tslint file
+
+    -- Booting Process of Angular Apps --
+
+    ng serve
+        - compiling the app
+        - main.ts
+            -bootstrapModule(AppModule) // telling it to boot with AppModule in main.ts
+                - AppModule
+                    - Component: AppModule
+                - Auth module
+                    - Login component
+                    - Check authentication
+                    - Forgot
+                    - NewUser
+                    - Logged in
+                [needa be changed in main.ts]
+                [test.ts too]
+        - test.ts
+            test scripts for main.ts
+
+        index.html
+            AppModule
+                Component
+                    <app-root>
+        Whenever we do ng serve/buil/test
+
+           -Transpiling          
+            Convert TS- >JS
+                main.js
+                polyfills.js
+                vendor.js
+                style.js
+                runtime.js
+
+        - package.json
+        - package-lock.json
+
+
+                -> singlerun/multiplerun
+        
+
+        [authentication module]

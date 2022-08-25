@@ -1,0 +1,81 @@
+src->app->app.modules.ts
+
+Modular_based architechture
+
+    src-> app.modules.ts
+        - Browser Module
+        - App Routing module
+        - Browser animation module
+    
+    - Angular Mateiral Library
+        - MatButtonModule
+        - MatDropdownModule
+    
+All the code and funtionalities are grouped in modules
+
+When @ symbol : its a decorator:tells u what it is
+
+@NGModule
+    everymodule will hv component/paramenters
+
+    declaration:
+        we add all components to the module here.
+    imports
+        import modules inside a module
+    providers
+        services that will be injected here
+    bootstrap
+        what is the first component the module shd load 
+    exports
+        export and exposes the component outside of the module
+
+
+Every angular app shd hv at least 1 module
+    default: angular framework : AppModule
+        AppComponent
+    If create new module:
+        - Import the newly created module into App Module
+        - Everything Falls under the App module
+
+8. Think of creating modules first..when we are building CRM tools
+
+    Contacts
+    User
+    leads
+    auth
+    profile
+    settings
+    opportunities
+
+
+9. Feature modules
+    -Toggle ON OFF modules based on conditions 
+        -different user, different access settings
+    
+10. Modules - Grouping
+    - component
+    - services
+    - pipes
+    - directives
+
+11. Create a custom module
+    ng generate module contacts, leads, settings, opportunities, authentication
+
+
+12. To access the component outside of the module u have to export it in the module:
+    new_module.ts
+    @NgModule
+    {   declarations:[new_component]
+        exports:[new_component]
+    }
+
+    app.module.ts
+    @NgModule{
+        import new_module
+    }
+
+13. Angular component communication
+    - Using Import/Export directives
+        - Parent/Child
+        - List-users [parent] ->> Filter-users [child]
+    - Services

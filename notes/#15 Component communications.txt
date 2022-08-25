@@ -1,0 +1,29 @@
+Contacts module
+
+Contacts-listing-> parent component
+    component
+
+Leads module  
+    leads-listing
+        leads-grid
+        leads-tools
+            download-excel
+            download-pdf
+p1
+    child1
+        sub-child1
+    child2
+
+p2
+    p2-child1
+
+Communications between related components
+    parent -> child components
+        @Input
+    Child component -> Parent component
+        @Output
+
+
+Communications between unrelated components
+    Component1 -> Services <- Component2
+    

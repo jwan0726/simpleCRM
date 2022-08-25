@@ -1,0 +1,57 @@
+Components are basic building blocks of applications
+
+Created Auth modules [functions that belong to the same funcitonality]
+    - new-user
+    - login
+    - reset pw
+    - 
+
+Components is the smallest functionality that we will implement in our application.
+
+When we group multiple components-> becomes a module
+
+Parent-child relationship of components:
+
+Tree-herirachy of components
+    Dashboard page
+        display_contact_list [one component]
+            contact-grid   [component]
+                contact-imports 
+                contact-export
+            contact-options
+
+Lets create some custom components.
+
+cd src\app\contacts\
+ng g component add-contact
+ng g component edit-contact
+ng g component list-contacts
+ng g component delete-contacts
+
+all componenets have 4 files
+    - component.ts -> Class File [Methods & Logic]
+    - component.html -> View [UI]
+    - components.spec.ts -> Unit test script for componenet
+    - component.scss -> Stylesheet of the component
+ 
+Component Decorator inside the component.ts file
+@Component
+
+    Selector -> Unique id of this componenet:
+        - Selector-> "app-<name_of_component>"
+        - "app" prefix can be changed in "src\angular.json"
+
+    Templates in componenet:
+        templateUrl 
+            -link-> html code: component/html
+            - is always one file
+
+        ||
+
+        template
+            enclose html code within this field using `<h1>Some Headlines</h1>`
+            instead of html file
+
+    styleUrls -> link to ur stylesheet : component.scss
+        -> is an array
+        -> it can take more than one stylesheet as input

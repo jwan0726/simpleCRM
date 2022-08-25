@@ -1,0 +1,36 @@
+Router
+    - To manage paths and routes of Angular apps
+    - Nav between views in angular app
+    -SINGLETON: One instance of the router in Angular app
+
+eg:
+        Home -> http://myappplication.com/ -> Default Route
+
+        Profile -> http://myappplication.com/profile -> Component Routing
+
+        Search -> http://myappplication.com/search?user=abc -> Query Params
+
+        Tasks -> http://myappplication.com/tasks/10/category/pending -> URL Segments
+
+        Users -> http://myappplication.com/users -> Module
+            
+            view-user -> http://myappplication.com/users/view/10 -> Child Routes
+            edit-user -> http://myappplication.com/users//edit/10
+            add-user -> http://myappplication.com/users/add
+            manage-user -> http://myappplication.com/users/manage
+        
+        PageNotFound -> http://myappplication.com/ -> 404 error -> No Matching Error
+- import { Routes,RouterModule } from '@angular/router' <package>
+    in app.module.ts
+
+    -Setup Router Array:
+        everytime a request is made, the router will search in the list of array 
+        and find the most relavent search.
+    -Child routes
+    -Lazy Routing
+
+        
+- Componenet Router
+
+- Router Outlet
+

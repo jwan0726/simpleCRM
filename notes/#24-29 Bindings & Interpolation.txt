@@ -1,0 +1,83 @@
+Data Binding:
+    Each component
+        - user.component.css -> classNames
+        - user.component.html -> views
+        - user.component.ts -> displayed data/expressions
+        - user.component.spec.ts
+
+        One way
+            Template -> 
+        Two-Way
+            Component <-> Template
+
+Interpolation:
+    In <component.ts>:
+    declare objName = '' // string
+    obj = { a:15, b:46, c:89 } // obj 
+    // number
+
+    in <component.html>:
+        {{ objName }}
+        {{ obj.a }} {{ obj.b }}
+
+    Use Interpolation with *ngIf & *ngFor
+
+Property binding:
+
+    <h2 [ngClass]="'c1'">Learning Property Binding</h2>
+    <p>Property binding lets u to bind to any HTML property</p>
+    <p>
+    [InnerHTML] is a property. The firstName value is being pushed to this
+    placeholder.This technique can be used in jpg too. We can bind multiple
+    properties to a DOM Element
+    </p>
+    <div [innerHTML]="userObject.firstName"></div>
+    <ul>
+    <li>innterHTML</li>
+ 
+    <li>[src] + [alt]</li>
+    <li>title &lt;h1&gt;</li>
+    <li>table &lt;td&gt; &lt;tr&gt;</li>
+    <li>style to p tag</li>
+    </ul>
+    <img [src]="imgUrl" [alt]="altUrl" />
+
+Attribute Binding:
+    - Attribute binding is uni-directional
+    - Syntax [attr.attribute_name]="expre ssion"
+
+    [ngClass]="expression" // property binding
+    [attr.className]="c1" // attribute  binding
+
+    ->some attributes are not natively supported for elements 
+        [rowspan] = "rowVal" // ERROR
+        [attr.rowspan] = "rowVal"
+
+    -> prefer Property binding
+        - but some cases we must use attribute binding
+Event Binding:
+    - Event binding is uni-directional
+        -> onclick
+        -> onmouseover
+        -> onfocus
+        -> onblur
+    
+    <button(click)="method()">text</button>
+    <input type="text" (focus)="inputBox()" />
+
+    - Can be applied to any element
+
+Two-Way Data Binding:
+    - [(ngModel)]
+    - Combining Property Binding & Event Binding
+    - View -> component -> View
+
+    <input [value]="data1" (input)="$event.target.value"/>
+
+    =>>
+
+    <input [(ngModel)]="username" (input)="$event.target.value"/>
+
+    Errors:
+        Can't bind to 'ngModel' since it isn't a known property of 'input'.
+        -> HOw to fix-FormsModule needed to be imported to AppModule <app.module.ts>

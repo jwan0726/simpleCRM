@@ -1,0 +1,47 @@
+//
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+
+//
+
+- Check node ver
+    node -v
+
+- Check npm ver
+    npm -v
+
+- Install Angular CLI
+    npm insall -g @angular/cli
+
+- Create New Project
+    ng new <Project_Name>
+
+- cd <Project_Name>
+
+- ng serve
+    -> Application will be compiled
+    -> default port:4200
+    -> http://localhost:4200
+
+
+// Install boostrap 5 [open source css framework]
+
+NPM package manager
+
+    -> Boostrap 5
+
+    npm i boostrap popper
+
+Check Boostrap ver
+    - package.json
+
+update Angular.json:
+    -Script & source
+
+Restart App
+    - ng serve
+
+
+// Install Angular Material
+
+    ng add @angular/material
+    

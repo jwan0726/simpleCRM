@@ -1,0 +1,30 @@
+Pipes
+    - Transform data --> Format
+    - Take data inputs and convert them into certain format
+    - parameter pipes
+    - Chain pipes.multiple pipes to data input
+
+- Build-in Pipes
+
+    - Use them in template 
+    - multiple pipes on elements
+    - <div> {{ <input_data> | <name_of_pipe> }} </div>
+    Eg:
+        -lowercase
+        -uppercase
+        -Currency
+        -Date
+        -JSon obj
+        -Percentage rounds to nearest integer
+
+- Parametrized Pipes
+    Conditions/filters/specific data
+    - Currency
+    {{ <data_input>| <Pipie_name>:'<parameter>'}}
+    {{Price | currency:'hkd'}}
+    - Date
+    - Percentage
+
+-Chaining Pipes
+    {{dob |date| date}}
+    -Multiple Pipes to format same data input

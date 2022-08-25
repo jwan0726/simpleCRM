@@ -1,0 +1,19 @@
+8 
+ngOnChanges()
+    Any component that has input
+    an input value changes
+
+ngOnInit()
+    - To Initialize data in component
+    - Called only once
+    - Everytime after initiate
+    -
+
+
+ngOnChanges()
+ngOnInit()-init data into components-default generated
+ngAfterViewInit()
+ngOnDestroy()
+
+- import lifecyclehook from angular core
+- extent implement section

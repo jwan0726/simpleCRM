@@ -1,0 +1,106 @@
+Extend the power of html by giving it new syntax
+Extend Change Modify behaviour of the DOM
+
+
+3 Types of Directives
+
+-Component Directives
+    Event Attached
+
+- Structural Directives: [ngIf ngFor ngSwitch]
+  mod <app.component.html> & <app.component.ts>
+
+    - Updates the structure of the View
+    - Starts with *
+        - ngIf
+            - Can Use || , && , ! 
+            <div *ngIf="<condition">Value1</div>
+            
+            <div *ngIf="success_msg; then updated_msg; else error_msg"></div>
+            <ng-template #updated_msg> User updated successfully </ng-template>
+            <ng-template #error_msg> User was not added </ng-template>
+            
+            - in <app.component.ts> :
+                success_msg = false;
+                success_flag = false;
+
+        - ngFor 
+            <div *ngFor="let thing of someDict; index as i;even as e;first as f">{{dict.key}}</div>
+            <div *ngIf="odd" style="something">{{i}} {{thing.key1}} {{thing.key2}}</div>
+                - index - return index
+                - first - true if dict[0]
+                - last  - true if dict[-1]
+                - even  - true if i%2=0
+                - odd   - true if !(i%2=0)
+            in <app.component.ts> :
+                someDict=[{key1:val1,key2:val2,key3:val3},
+                        {key1:val1,key2:val2,key3:val3},
+                        {key1:val1,key2:val2,key3:val3}]
+
+        - ngSwitch
+            - Starts with []
+            - Switch Statement
+            - Show/Hide Element based on condition
+            - Multiple Value for condition check
+                - ngSwitch
+                - ngSwitchCase
+                - ngSwitchDefault
+                    // the strings needed to be inside ''
+            <div [ngSwitch]="switch_expression">
+                <div *ngSwitchCase="'match_expression_1'">Value</div>
+                <div *ngSwitchCase="'match_expression_2'">Value</div>
+                <div *ngSwitchCase="'match_expression_3'">Value</div>                
+                <div *ngSwitchDefault>Value</div>
+            </div>
+            in <app.component.ts> :
+                switch.expression = 'match_expression_1'
+
+            
+- Attribute Directives
+    - ngStyle
+        - Written in [ngStyle]
+        - More than 1 property in any DOM Element
+        - Setting a Value to ngStyle
+            <div [ngStyle]="{ 'background-color': 'green', color: '#ffffff' }">
+                This is the Green DIV
+            </div>
+        - Dynamic Values in ngStyle
+            <div [ngStyle]="{ 'background-color': styleProp, color: '#ffffff' }">
+                This is the Dynamic DIV
+            </div>
+            - Do not put '' in field.
+            - Put value in <app.component.ts>
+        - ngStyle with Conditions
+
+    - ngClass
+        - Written in [ngClass]
+        - Directive used to set the className of the DOM element
+        - more than 1 className
+        - Pass string, array, obj, component method
+            <div [ngClass]="'c1'">This is ngClass</div>
+            - use '' IN field
+            - Change <app.component.css>
+        - Use Class-> Code Reuse
+            - Direct Declare 
+                - <div [ngClass]="'c3'">This is ngClass-Direct Declare</div>
+
+            - Dynamic Class
+                <div [ngClass]="StyleClsProp"></div>
+                [declare this in <app.component.ts> && <.css>]
+
+            - Conditionals
+                - <div [ngClass]="ConditionClsProp === 'c4' ? 'c4' : 'c5'">
+                ==
+                if property == 'c4'? <then apply> 'c4' <else apply> : 'c5'">
+            - Object
+                - <div [ngClass]="{ c4: true, c5: false }">
+                    [.c4{} is in <.css>]
+
+ng g component <component_name>
+ng g directive <directive_name>
+
+App Component
+    Component Directive
+
+Custom Directives
+    ng g directive highlight
