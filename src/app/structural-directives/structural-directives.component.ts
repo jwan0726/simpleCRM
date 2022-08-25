@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-structural-directives',
   templateUrl: './structural-directives.component.html',
-  styleUrls: ['./structural-directives.component.css'],
+  styleUrls: ['./structural-directives.component.scss'],
 })
 export class StructuralDirectivesComponent implements OnInit {
   success_msg = false;

@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-binding-interpol',
   templateUrl: './binding-interpol.component.html',
-  styleUrls: ['./binding-interpol.component.css'],
+  styleUrls: ['./binding-interpol.component.scss'],
 })
 export class BindingInterpolComponent implements OnInit {
   userObject = { firstName: 'HAHA', lastName: 'John' };
