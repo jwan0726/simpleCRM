@@ -6,7 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list-users.component.scss'],
 })
 export class ListUsersComponent implements OnInit {
-  constructor() {}
+  isChild = false;
 
-  ngOnInit(): void {}
+  constructor() {
+    console.log('Parent Constructor');
+  }
+
+  ngOnInit(): void {
+    console.log('Parent ngOnInit');
+  }
+  toggleChild() {
+    this.isChild = !this.isChild;
+  }
 }

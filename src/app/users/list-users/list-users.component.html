@@ -1,1 +1,4 @@
+<h3>Parent Component</h3>
 <p>list-users works!</p>
+<button (click)="toggleChild()">Toggle Child</button>
+<app-filter-users *ngIf="isChild"></app-filter-users>

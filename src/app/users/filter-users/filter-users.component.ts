@@ -6,7 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./filter-users.component.scss'],
 })
 export class FilterUsersComponent implements OnInit {
-  constructor() {}
+  constructor() {
+    console.log('Child constructor');
+  }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log('Child ngOninit Called');
+  }
 }
